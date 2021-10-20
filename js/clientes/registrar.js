@@ -16,7 +16,7 @@ function registrar() {
     if (validar()){
         $.ajax({
             // la URL para la petición (url: "url al recurso o endpoint")
-            url: "https://g713b8b957367f3-db202109230628.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client",
+            url: "144.22.227.164:8080/api/Client/save",
             
             // la información a enviar
             // (también es posible utilizar una cadena de datos)
