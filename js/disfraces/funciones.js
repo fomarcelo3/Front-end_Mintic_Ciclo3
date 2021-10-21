@@ -9,22 +9,17 @@ function validaesVacio(dato){
  */
 function validar(){
     //obtiene valores
-    let id = $("#id").val();
+    // let id = $("#id").val();
     let name = $("#name").val();
     let brand = $("#brand").val();
-    let model = $("#model").val();
+    let year = $("#year").val();
     let category = $("#category").val();
+    let description = $("#description").val();
     let errores="";
     $("#mensajes").html("");
 
     //valida que los campos no sean vacios
-    if( validaesVacio(id)) {
-        errores="id vacio<br>";
-        $("#mensajes").html(errores);
-        $("#mensajes").show(500);
-        $("#id").focus();
-        return false;
-    }else if( validaesVacio(name)) {
+    if( validaesVacio(name)) {
         errores="name vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
@@ -36,8 +31,8 @@ function validar(){
         $("#mensajes").show(500);
         $("#brand").focus();
         return false;
-    }else if( validaesVacio(model)) {  
-        errores="model vacio<br>";
+    }else if( validaesVacio(year)) {  
+        errores="year vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#model").focus();

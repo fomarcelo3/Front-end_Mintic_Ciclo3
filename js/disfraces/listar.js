@@ -13,7 +13,7 @@ $(document).ready(function () {
 function listar() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "144.22.227.164:8080/api/Costume/all",
+        url: "http://144.22.227.164:8080/api/Costume/all",
         
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
@@ -30,10 +30,10 @@ function listar() {
         // la respuesta es pasada como argumento a la función
         success: function (respuesta) {
             //escribe en la consola del desarrollador para efectos de depuración
-            console.log(respuesta.items);
+            console.log(respuesta);
 
             //recibe el arreglo 'items' de la respuesta a la petición
-            listarRespuesta(respuesta.items);
+            listarRespuesta(respuesta);
         },
 
         // código a ejecutar si la petición falla;
@@ -66,20 +66,20 @@ function listarRespuesta(items) {
     //encabezados o títulos de la tabla
     var tabla = `<table border="1">
                   <tr>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Categoria</th>
                     <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Categoria</th>
+                    <th>Año</th>
                     <th colspan="2">Acciones</th>
                   </tr>`;
                   
     //recorre el arreglo de 'items' y construye dinamicamente la fila de datos de la tabla
     for (var i=0; i < items.length; i++) {
         tabla +=`<tr>
-                   <td>${items[i].brand}</td>
-                   <td>${items[i].model}</td>
-                   <td>${items[i].category_id}</td>
                    <td>${items[i].name}</td>
+                   <td>${items[i].brand}</td>
+                   <td>${items[i].category.name}</td>
+                   <td>${items[i].year}</td>
                    <td><button onclick="editarRegistro(${items[i].id})">Editar</button></td>
                    <td><button onclick="borrarRegistro(${items[i].id})">Borrar</button></td>
                    </tr>`;
