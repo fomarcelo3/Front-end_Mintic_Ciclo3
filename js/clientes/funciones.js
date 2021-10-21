@@ -9,21 +9,16 @@ function validaesVacio(dato){
  */
 function validar(){
     //obtiene valores
-    let id = $("#id").val();
+    // let id = $("#id").val();
     let name = $("#name").val();
     let email = $("#email").val();
+    let password = $("#password").val();
     let age = $("#age").val();
     let errores="";
     $("#mensajes").html("");
 
     //valida que los campos no sean vacios
-    if( validaesVacio(id)) {
-        errores="id vacio<br>";
-        $("#mensajes").html(errores);
-        $("#mensajes").show(500);
-        $("#id").focus();
-        return false;
-    }else if( validaesVacio(name)) {
+    if( validaesVacio(name)) {
         errores="name vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
@@ -34,6 +29,12 @@ function validar(){
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#email").focus();
+        return false;
+    }else if( validaesVacio(password)) {
+        errores="password vacio<br>";
+        $("#mensajes").html(errores);
+        $("#mensajes").show(500);
+        $("#password").focus();
         return false;
     }else if( validaesVacio(age)) {  
         errores="age vacio<br>";

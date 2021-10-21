@@ -4,9 +4,10 @@ function registrar() {
 
     //crea un objeto javascript
     let datos={
-        id: $("#id").val(),
+        // id: $("#id").val(),
         name: $("#name").val(),
         email: $("#email").val(),
+        password: $("#password").val(),
         age: $("#age").val()
     }
 
@@ -16,7 +17,7 @@ function registrar() {
     if (validar()){
         $.ajax({
             // la URL para la petición (url: "url al recurso o endpoint")
-            url: "144.22.227.164:8080/api/Client/save",
+            url: "http://144.22.227.164:8080/api/Client/save",
             
             // la información a enviar
             // (también es posible utilizar una cadena de datos)

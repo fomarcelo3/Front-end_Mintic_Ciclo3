@@ -13,7 +13,7 @@ $(document).ready(function () {
 function listar() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "144.22.227.164:8080/api/Client/all",
+        url: "http://144.22.227.164:8080/api/Client/all",
         
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
@@ -30,10 +30,10 @@ function listar() {
         // la respuesta es pasada como argumento a la función
         success: function (respuesta) {
             //escribe en la consola del desarrollador para efectos de depuración
-            console.log(respuesta.items);
+            console.log(respuesta);
 
             //recibe el arreglo 'items' de la respuesta a la petición
-            listarRespuesta(respuesta.items);
+            listarRespuesta(respuesta);
         },
 
         // código a ejecutar si la petición falla;
