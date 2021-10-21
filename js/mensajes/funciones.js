@@ -9,8 +9,9 @@ function validaesVacio(dato){
  */
 function validar(){
     //obtiene valores
-    let id = $("#id").val();
-    let mensaje = $("#mensaje").val();;
+    let mensaje = $("#mensaje").val();
+    let idClient= $("#client_id").val()
+    let id = $("#costume_id").val();
     let errores="";
     $("#mensajes").html("");
 
@@ -26,6 +27,12 @@ function validar(){
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#name").focus();
+        return false;
+    }else if( validaesVacio(idClient)) {
+        errores="idClient vacio<br>";
+        $("#mensajes").html(errores);
+        $("#mensajes").show(500);
+        $("#idClient").focus();
         return false;
     }else{
         $("#mensajes").html("");

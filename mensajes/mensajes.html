@@ -63,10 +63,13 @@
       <!-- Seccion para nuevos registros-->
       <div id="nuevo">
         <h3>Registrar ...</h3>
-        <input type="number" id="id" placeholder="id">
-        <textarea id="mensaje" name="mensaje" rows="4" cols="50">
+        
+        <textarea id="mensaje" name="mensaje" rows="2" cols="50">
+          
          Ingrese su mensaje
           </textarea>
+          <input type="number" id="client_id" placeholder="Id Cliente">
+          <input type="number" id="costume_id" placeholder="Id disfraz">
         <button onclick="registrar();">Guardar</button>
         <button onclick="estadoInicial();">Cancelar</button>
       </div>
@@ -76,7 +79,7 @@
       <div id="editar">
         <h3>Editar ...</h3>
         <input type="number" id="idEdit" placeholder="id">
-        <textarea id="mensajeEdit" name="mensajeEdit" rows="4" cols="50">
+        <textarea id="mensajeEdit" name="mensajeEdit" rows="2" cols="50">
           
            </textarea>
         <button onclick="actualizar();">Guardar</button>

@@ -2,10 +2,19 @@
 //petición al ws de tipo POST
 function registrar() {
 
+    let client_id={
+        idClient: $("#client_id").val()
+    }
+
+    let costume_id={
+        id: $("#costume_id").val()
+    }
+
     //crea un objeto javascript
     let datos={
-        id: $("#id").val(),
-        messagetext: $("#mensaje").val()
+        messageText: $("#mensaje").val(),
+        client: client_id,
+        costume: costume_id
     }
 
     //convierte el objeto javascript a json antes de agregarlo a los datos de la petición
@@ -14,7 +23,7 @@ function registrar() {
     if (validar()){
         $.ajax({
             // la URL para la petición (url: "url al recurso o endpoint")
-            url: "144.22.227.164:8080/api/Message/save",
+            url: "http://144.22.227.164:8080/api/Message/save",
             
             // la información a enviar
             // (también es posible utilizar una cadena de datos)
