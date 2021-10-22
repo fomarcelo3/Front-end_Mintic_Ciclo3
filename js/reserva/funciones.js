@@ -9,21 +9,22 @@ function validaesVacio(dato){
  */
 function validar(){
     //obtiene valores
-    let mensaje = $("#mensaje").val();
+    let startDate = $("#startDate").val();
+    let devolutionDate = $("#devolutionDate").val();
     let idClient= $("#client_id").val()
     let id = $("#costume_id").val();
     let errores="";
     $("#mensajes").html("");
 
     //valida que los campos no sean vacios
-    if( validaesVacio(id)) {
-        errores="Id disfraz vacio<br>";
+    if( validaesVacio(startDate)) {
+        errores="Fecha inicial vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
-        $("#id").focus();
+        $("#name").focus();
         return false;
-    }else if( validaesVacio(mensaje)) {
-        errores="Mensaje vacio<br>";
+    }else if( validaesVacio(devolutionDate)) {
+        errores="Fecha devolucion vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#name").focus();
@@ -33,6 +34,12 @@ function validar(){
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#idClient").focus();
+        return false;
+    }else if( validaesVacio(id)) {
+        errores="Id disfraz vacio<br>";
+        $("#mensajes").html(errores);
+        $("#mensajes").show(500);
+        $("#id").focus();
         return false;
     }else{
         $("#mensajes").html("");

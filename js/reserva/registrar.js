@@ -12,7 +12,8 @@ function registrar() {
 
     //crea un objeto javascript
     let datos={
-        messageText: $("#mensaje").val(),
+        startDate: $("#startDate").val(),
+        devolutionDate: $("#devolutionDate").val(),
         client: client_id,
         costume: costume_id
     }
@@ -23,7 +24,7 @@ function registrar() {
     if (validar()){
         $.ajax({
             // la URL para la petición (url: "url al recurso o endpoint")
-            url: "http://144.22.227.164:8080/api/Message/save",
+            url: "http://144.22.227.164:8080/api/Reservation/save",
             
             // la información a enviar
             // (también es posible utilizar una cadena de datos)
