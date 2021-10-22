@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="../css/style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="../js/mensajes/borrar.js"></script>
-  <script src="../js/mensajes/editar.js"></script>
-  <script src="../js/mensajes/funciones.js"></script>
-  <script src="../js/mensajes/listar.js"></script>
+  <script src="../js/reserva/borrar.js"></script>
+  <script src="../js/reserva/editar.js"></script>
+  <script src="../js/reserva/funciones.js"></script>
+  <script src="../js/reserva/listar.js"></script>
   
-  <script src="../js/mensajes/registrar.js"></script>
+  <script src="../js/reserva/registrar.js"></script>
 </head>
 
 <body>
@@ -53,12 +53,13 @@
   
     <!-- Page Content  -->
     <div id="content" class="p-4 p-md-5 pt-5">
-      <h2 class="mb-4">Mensajes</h2>
+      <h2 class="mb-4">Reservas</h2>
 
+      <div id="mensajes"></div>
        <!-- boton para agregar nuevos registros -->
 
        <div style="margin: 10px;">
-        <button id="nuevoRegistro" onclick="activaNuevo();">Nuevo Mensaje</button>
+        <button id="nuevoRegistro" onclick="activaNuevo();">Nuevo reserva</button>
       </div>
 
       <!--aqui se actualizara el listado -->

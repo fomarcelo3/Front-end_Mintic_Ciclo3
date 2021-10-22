@@ -13,7 +13,7 @@ $(document).ready(function () {
 function listar() {
     $.ajax({
         // la URL para la petición (url: "url al recurso o endpoint")
-        url: "http://144.22.227.164:8080/api/Message/all",
+        url: "http://144.22.227.164:8080/api/Reservation/all",
         
         // la información a enviar
         // (también es posible utilizar una cadena de datos)
@@ -67,19 +67,21 @@ function listarRespuesta(items) {
     var tabla = `<table border="1">
                   <tr>
                     <th>ID</th>
-                    <th>Mensaje</th>
                     <th>Disfraz</th>
                     <th>Cliente</th>
+                    <th>Fecha reserva</th>
+                    <th>Fecha entrega</th>
                     <th colspan="2">Acciones</th>
                   </tr>`;
                   
     //recorre el arreglo de 'items' y construye dinamicamente la fila de datos de la tabla
     for (var i=0; i < items.length; i++) {
         tabla +=`<tr>
-                   <td>${items[i].idMessage}</td>
-                   <td>${items[i].messageText}</td>
+                   <td>${items[i].idReservation}</td>
                    <td>${items[i].costume.name}</td>
                    <td>${items[i].client.name}</td>
+                   <td>${items[i].startDate}</td>
+                   <td>${items[i].devolutionDate}</td>
                    <td><button onclick="editarRegistro(${items[i].id})">Editar</button></td>
                    <td><button onclick="borrarRegistro(${items[i].id})">Borrar</button></td>
                    </tr>`;
