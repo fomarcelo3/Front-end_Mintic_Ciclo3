@@ -19,25 +19,25 @@ function validar(){
 
     //valida que los campos no sean vacios
     if( validaesVacio(name)) {
-        errores="name vacio<br>";
+        errores="Nombre vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#name").focus();
         return false;
     }else if( validaesVacio(email)) {
-        errores="email vacio<br>";
+        errores="Email vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#email").focus();
         return false;
     }else if( validaesVacio(password)) {
-        errores="password vacio<br>";
+        errores="Password vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#password").focus();
         return false;
     }else if( validaesVacio(age)) {  
-        errores="age vacio<br>";
+        errores="Edad vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#age").focus();

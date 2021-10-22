@@ -17,19 +17,19 @@ function validar(){
 
     //valida que los campos no sean vacios
     if( validaesVacio(id)) {
-        errores="id vacio<br>";
+        errores="Id vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#id").focus();
         return false;
     }else if( validaesVacio(mensaje)) {
-        errores="mensaje vacio<br>";
+        errores="Mensaje vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#name").focus();
         return false;
     }else if( validaesVacio(idClient)) {
-        errores="idClient vacio<br>";
+        errores="Id Cliente vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#idClient").focus();

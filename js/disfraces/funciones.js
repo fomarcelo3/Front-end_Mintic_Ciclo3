@@ -20,25 +20,25 @@ function validar(){
 
     //valida que los campos no sean vacios
     if( validaesVacio(name)) {
-        errores="name vacio<br>";
+        errores="Nombre vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#name").focus();
         return false;
     }else if( validaesVacio(brand)) {
-        errores="brand vacio<br>";
+        errores="Marca vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#brand").focus();
         return false;
     }else if( validaesVacio(year)) {  
-        errores="year vacio<br>";
+        errores="Año vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#model").focus();
         return false;
     }else if( validaesVacio(category)) { 
-        errores="category vacio<br>";
+        errores="Categoria vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#category").focus();

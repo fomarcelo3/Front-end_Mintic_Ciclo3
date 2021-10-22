@@ -16,13 +16,13 @@ function validar(){
 
     //valida que los campos no sean vacios
     if( validaesVacio(name)) {
-        errores="name vacio<br>";
+        errores="Nombre vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#name").focus();
         return false;
     }else if( validaesVacio(description)) {
-        errores="description vacio<br>";
+        errores="Descripcion vacio<br>";
         $("#mensajes").html(errores);
         $("#mensajes").show(500);
         $("#description").focus();
