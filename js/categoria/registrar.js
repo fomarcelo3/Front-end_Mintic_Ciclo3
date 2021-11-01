@@ -59,7 +59,7 @@ function registrar() {
  */
 function activaNuevo(){
     $("#nuevo").show(500);
-    $("#id").focus();
+    $("#name").focus();
     $("#editar").hide();
     $("#nuevoRegistro").hide(500)
     $("#listado").hide(500);

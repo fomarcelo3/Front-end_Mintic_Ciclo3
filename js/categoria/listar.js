@@ -46,7 +46,7 @@ function listar() {
 
         // código a ejecutar sin importar si la petición falló o no
         complete: function (xhr, status) {
-            $("#mensajes").html("Obteniendo listado de ...");
+            $("#mensajes").html("Obteniendo listado de categorias.");
             $("#mensajes").hide(1000);
         }
     });
@@ -98,6 +98,8 @@ function estadoInicial(){
     $("#nuevoRegistro").show(500)
 
     //limpia el contenido de los campos del formulario nuevo
-    $("#id").val(""),
-    $("#mensaje").val("")
+    
+    $("#name").val("");
+    $("#description").val("");
+
 }

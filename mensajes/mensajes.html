@@ -76,9 +76,9 @@
         <textarea id="mensaje" name="mensaje" rows="2" cols="50">
           
          Ingrese su mensaje
-          </textarea>
-          <input type="number" id="client_id" placeholder="Id Cliente">
-          <input type="number" id="costume_id" placeholder="Id disfraz">
+          </textarea><br><br>
+          <select name="client_id" id="client_id"></select><br><br>
+          <select name="costume_id" id="costume_id"></select><br><br>
         <button onclick="registrar();">Guardar</button>
         <button onclick="estadoInicial();">Cancelar</button>
       </div>
@@ -87,8 +87,8 @@
       <!-- Seccion para editar registros-->
       <div id="editar">
         <h3>Editar ...</h3>
-        <input type="number" id="idEdit" placeholder="id">
-        <textarea id="mensajeEdit" name="mensajeEdit" rows="2" cols="50">
+        <input type="number" id="idEdit" placeholder="id"><br><br>
+        <textarea id="mensajeEdit" name="mensajeEdit" rows="2" cols="50"><br><br>
           
            </textarea>
         <button onclick="actualizar();">Guardar</button>

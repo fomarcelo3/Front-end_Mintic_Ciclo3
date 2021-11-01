@@ -46,7 +46,7 @@ function listar() {
 
         // código a ejecutar sin importar si la petición falló o no
         complete: function (xhr, status) {
-            $("#mensajes").html("Obteniendo listado de ...");
+            $("#mensajes").html("Obteniendo listado de mensajes");
             $("#mensajes").hide(1000);
         }
     });

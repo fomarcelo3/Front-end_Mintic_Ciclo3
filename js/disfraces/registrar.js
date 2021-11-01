@@ -66,8 +66,63 @@ function registrar() {
  */
 function activaNuevo(){
     $("#nuevo").show(500);
-    $("#id").focus();
+    $("#name").focus();
     $("#editar").hide();
     $("#nuevoRegistro").hide(500)
     $("#listado").hide(500);
+    listarCategorias();
+}
+
+
+function listarCategorias() {
+    $.ajax({
+        // la URL para la petición (url: "url al recurso o endpoint")
+        url: "http://144.22.227.164:8080/api/Category/all",
+        
+        // la información a enviar
+        // (también es posible utilizar una cadena de datos)
+        //si el metodo del servicio recibe datos, es necesario definir el parametro adicional
+        //data : { id : 1, ...},
+
+        // especifica el tipo de petición http: POST, GET, PUT, DELETE
+        type: 'GET',
+
+        // el tipo de información que se espera de respuesta
+        dataType: 'json',
+
+        // código a ejecutar si la petición es satisfactoria;
+        // la respuesta es pasada como argumento a la función
+        success: function (respuesta) {
+            
+            armaListaCategorias(respuesta);
+        },
+
+        // código a ejecutar si la petición falla;
+        // son pasados como argumentos a la función
+        // el objeto de la petición en crudo y código de estatus de la petición
+        error: function (xhr, status) {
+            $("#mensajes").html("Ocurrio un problema al ejecutar la petición..." + status);
+            //$("#mensajes").hide(1000);
+        },
+
+        // código a ejecutar sin importar si la petición falló o no
+        complete: function (xhr, status) {
+            $("#mensajes").html("Obteniendo listado de ...");
+            $("#mensajes").hide(1000);
+        }
+    });
+}
+
+function armaListaCategorias(items){
+    $("#listado").html("");
+    $("#listado").show(500);
+
+    var lista =` <option value="">--Selecciona una categoria--</option>`;
+
+    for (var i=0; i< items.length; i++){
+        lista += ` <option value="${items[i].id}">${items[i].name}</option> `;
+    }
+
+    $("#category").html(lista);
+
 }
